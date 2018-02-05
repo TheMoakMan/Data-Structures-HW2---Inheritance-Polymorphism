@@ -15,6 +15,7 @@ void get_identity(string my_id[])
 }
 
 
+// This is provided as an example of scoping and defining a class function
 string Machine::get_function()
 {
     cout << my_function;
