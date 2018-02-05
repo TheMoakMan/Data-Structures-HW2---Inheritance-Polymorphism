@@ -66,12 +66,12 @@ If numCores value is not even at construction, then throw your custom exception.
 */
 class X86: public Machine
 {
-    protected:
-        bool *numCores;
+    private:
+        bool *num_cores;
 
     public:
         X86();
-        X86(string init_function, int numCores);
+        X86(string init_function, int init_cores);
         ~X86();
 
         // allows you to set one of the indices
@@ -85,24 +85,24 @@ class X86: public Machine
 /*
 virtual class
 my_function should default construct to be "Reduced Instruction Set"
-numBits should be default constructed to 64
-A parameterized constructor should allow the user to set numBits at runtime and set my_function
-If numBits is not 32 or 64, then throw your custom exception.
+num_bits should be default constructed to 64
+A parameterized constructor should allow the user to set num_bits at runtime and set my_function
+If num_bits is not 32 or 64, then throw your custom exception.
 */
 class ARM: public Machine
 {
     private:
-        short numBits;
+        short num_bits;
 
     public:
         ARM();
-        ARM(string init_function, short numBits);
+        ARM(string init_function, short init_bits);
 
         // sets numbits
-        short setNumBits(short setme);
+        void set_num_bits(short set_bits);
 
         // returns and couts numbits
-        short getNumBits();
+        short get_num_bits();
 };
 
 
@@ -112,7 +112,7 @@ get_puprose should return and cout the purpose.
 */
 class Operating_system
 {
-    private:
+    protected:
         string purpose = "Running a machine";
 
     public:
@@ -129,7 +129,7 @@ pupose should be able to be set by the parameterized constructor.
 */
 class Linux: public Operating_system
 {
-    private:
+    protected:
         int version_number;
 
     public:
@@ -162,9 +162,6 @@ get_version_number returns and cout the version number
 */
 class Cluster: public X86, public Linux
 {
-    private:
-
-
     public:
         string get_func_purpose();
         void set_version_number(int set_ver_num);
