@@ -48,7 +48,7 @@ get_function should cout and return the variable my_function
 */
 class Machine
 {
-    private:
+    protected:
         string my_function = "Compute computable things";
 
     public:
@@ -66,7 +66,7 @@ If numCores value is not even at construction, then throw your custom exception.
 */
 class X86: public Machine
 {
-    private:
+    protected:
         bool *numCores;
 
     public:
@@ -202,9 +202,9 @@ class Personal_surveillance_device: public ARM, public Android
         long *my_IMEI;
         Personal_surveillance_device();
         Personal_surveillance_device(long input_my_IEMI);
-        ~Personal_surveillance_device()
-        Personal_surveillance_device(const Personal_surveillance_device &source)
-        Personal_surveillance_device & operator=(const Personal_surveillance_device &rhs)
+        ~Personal_surveillance_device();
+        Personal_surveillance_device(const Personal_surveillance_device &source);
+        Personal_surveillance_device & operator=(const Personal_surveillance_device &rhs);
         void set_phone_number();
         long get_phone_number();
         void set_version_number(int set_ver_num);
