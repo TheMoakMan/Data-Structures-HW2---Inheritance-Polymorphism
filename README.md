@@ -1,4 +1,4 @@
-Programming assignment 1 (PA01)
+Programming assignment 2 (PA02)
 ==============================
 
 The files listed here are the starting point for your assignment. 
