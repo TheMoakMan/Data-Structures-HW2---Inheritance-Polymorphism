@@ -75,10 +75,10 @@ class X86: public Machine
         ~X86();
 
         // allows you to set one of the indices
-        void set_num_cores(int position, bool value);
+        void set_core_pos(int position, bool value);
 
         // returns an element of the array
-        bool get_value_at_index(int index);
+        bool get_core_pos(int index);
 };
 
 
