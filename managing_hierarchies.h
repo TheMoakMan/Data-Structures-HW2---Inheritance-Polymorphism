@@ -118,7 +118,7 @@ class Operating_system
     public:
         string get_purpose();
         virtual void set_version_number(int set_ver_num) = 0;
-        virtual int get_version_number(int set_ver_num) = 0;
+        virtual int get_version_number() = 0;
 };
 
 
@@ -165,7 +165,7 @@ class Cluster: public X86, public Linux
     public:
         string get_func_purpose();
         void set_version_number(int set_ver_num);
-        int get_version_number(int set_ver_num);
+        int get_version_number();
 
 };
 
@@ -202,10 +202,10 @@ class Personal_surveillance_device: public ARM, public Android
         ~Personal_surveillance_device();
         Personal_surveillance_device(const Personal_surveillance_device &source);
         Personal_surveillance_device & operator=(const Personal_surveillance_device &rhs);
-        void set_phone_number();
+        void set_phone_number(int init_phone);
         long get_phone_number();
         void set_version_number(int set_ver_num);
-        int get_version_number(int set_ver_num);
+        int get_version_number();
         string get_func_purpose();
 };
 
