@@ -30,7 +30,7 @@ void get_identity(string my_id[]);
 Contrete class
 Implement (via overriding) a custom exception function here which follows the standard std exception class style for including an error message.
 We need to be able to catch this exception, and call it's standard message function.
-When we call that standard message function, it should cout an error message:
+When we call that standard message function, it should return an error message:
     "Custom error has occured"
 If you read the std exception documentation and examples I gave for the std expection, you will know *what* we are asking for ;)
 */
@@ -163,7 +163,6 @@ get_phone_number should return and cout your phone number formatted as below.
 set_phone_number should set your phone number if it is formatted like this:
 +1(573)-465-1111
 otherwise, it should throw your custom exception
-You will need to strip and re-insert the special characters.
 
 set_version_number must set the version_number variable to the inputted value.
 
