@@ -56,7 +56,7 @@ int main()
       cout << "Your OS version number is: " << PhoneOS->get_version_number() << endl;
 		
 	  //Get phone number
-	  cout << "What is your phone number?";
+	  cout << "What is your phone number? ";
 	  cin.ignore();
 		
 	  valid_Num = false;
@@ -94,7 +94,8 @@ int main()
 	   Cluster Cluster_Obj;
        Operating_system *ClusterOS = &Cluster_Obj;
  
-      cout << Cluster_Obj.get_func_purpose() << endl;
+      Cluster_Obj.get_func_purpose();
+      cout << endl;
 		
 	  //Read in the version number
 	  cout << "What is the version number of your operating system? ";
