@@ -9,3 +9,13 @@ It should have one function called set_pretend_encryption(), with void return ty
 If the bool is switched to 1, then cout: "Your device is now securely encrypted"
 If the bool is switched to 0, then cout: "Encryption is now off"
 */
+class Android: public Operating_system
+{
+	private:
+	    bool pretend_encryption;
+		
+    public:
+        Android();	
+		void set_pretend_encryption();
+	
+};

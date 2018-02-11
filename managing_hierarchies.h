@@ -185,7 +185,7 @@ class Personal_surveillance_device: public ARM, public Android
     public:
         long *my_IMEI;
         Personal_surveillance_device();
-        Personal_surveillance_device(long input_my_IEMI);
+        Personal_surveillance_device(long input_my_IMEI);
         ~Personal_surveillance_device();
         Personal_surveillance_device(const Personal_surveillance_device &source);
         Personal_surveillance_device & operator=(const Personal_surveillance_device &rhs);
